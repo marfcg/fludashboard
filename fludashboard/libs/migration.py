@@ -288,6 +288,11 @@ def migrate_from_csv_to_psql():
         'DELAYED': 'delayed',
         'FLU_A': 'flu_a',
         'FLU_B': 'flu_b',
+        'VSR': 'vsr',
+        'PARA1': 'para1',
+        'PARA2': 'para2',
+        'PARA3': 'para3',
+        'ADNO': 'adno',
         'INCONCLUSIVE': 'inconclusive',
         'Idade desconhecida': 'unknown_age',
         'NEGATIVE': 'negative',
@@ -300,7 +305,6 @@ def migrate_from_csv_to_psql():
         'Tipo': 'territory_type',  # Not needed in the table
         'UF': 'territory_id',
         'Unidade da Federação': 'state_country_name',  # Not needed
-        'VSR': 'vsr',
         'dado': 'dataset_id',
         'escala': 'scale_id',
         'sexo': 'gender'

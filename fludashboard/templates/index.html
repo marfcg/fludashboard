@@ -126,10 +126,25 @@
   <div class="row my-3">
     <!-- Map -->
     <div class="col-md-5">
-      <div class="card">
-        <h5 class="card-header" id="map-incidence-case-title">
-            Mapa do Plano de Contingência
-        </h5>
+      <div class="card h-100">
+        <div class="card-header" id="map-header-season">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" id="map-tab-contingency">
+                <h5>Plano de Contingência</h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" id="map-tab-activity">
+                Classificação da Temporada
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h5 class="card-header hidden" id="map-header-detailed">Atividade Semanal</h5>
+        <div class="card-body">
+          <h5 class="card-title" id="map-incidence-case-title">Mapa do Plano de Contingência</h5>
+        </div>
         <div class="card-block">
           <div id="map" class="content-height"></div>
         </div>
@@ -161,13 +176,13 @@
     <!-- Map -->
 
     <div class="col-md-7">
-          <div class="card">
+          <div class="card h-100 d-flex justify-content-center">
             <h5 class="card-header">
               <span
                   id="chart-incidence-case-title">Curva de Incidência</span>
                 <span class="territory-display"></span>
             </h5>
-            <div class="card-block chart-incidence">
+            <div class="card-block chart-incidence mt-auto">
               <!-- info panel -->
               <div id="chart-incidence-activity-level-panel">
                 <p class="seasons hidden">
@@ -207,7 +222,8 @@
                    class="content-height"></div>
               <!-- chart:end -->
             </div>
-            <p class="card-text"><small class="text-muted">*Com base nos dados disponíveis no sistema de informação
+            <p class="card-text mt-auto"><small class="text-muted">*Com base nos dados disponíveis no sistema de
+              informação
             </small></p>
 
           </div>
@@ -260,7 +276,7 @@
         <div class="card">
           <h5 class="card-header">
             Acompanhamento de oportunidades
-            <span class="period-display">na semana epidemiológica</span>
+            <span class="period-display">até a semana epidemiológica</span>
             <span class="week-display"></span>
             <span class="territory-display"></span>
           </h5>
@@ -274,7 +290,7 @@
         <div class="card">
           <h5 class="card-header">
             Exames laboratoriais
-            <span class="period-display">na semana epidemiológica</span>
+            <span class="period-display">até a semana epidemiológica</span>
             <span class="week-display"></span>
             <span class="territory-display"></span>
           </h5>

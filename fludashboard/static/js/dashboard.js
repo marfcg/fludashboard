@@ -143,7 +143,11 @@ class Dashboard {
       $('#btn-contingency').removeClass('selected');
       $('#btn-detailed').addClass('selected');
 
+      $('#map-tab-contingency').addClass('active');
+      $('#map-tab-contingency').addClass('disabled');
+
       $('.period-display').text('na semana epidemiológica');
+      $('#map-tab-activity').text('Nível de Atividade');
       $('#map-incidence-case-title').text('Mapa de incidência de SRAG');
       $('#map-legend-title').text('Situação da atividade semanal');
       $('#map-leg-low').text('Baixa');
@@ -175,7 +179,11 @@ class Dashboard {
       $('#btn-contingency').removeClass('selected');
       $('#btn-resumed').addClass('selected');
 
+      $('#map-tab-contingency').addClass('active');
+      $('#map-tab-contingency').addClass('disabled');
+
       $('.period-display').text('no ano epidemiológico');
+      $('#map-tab-activity').text('Classificação da Temporada');
       $('#map-incidence-case-title').text('Mapa da Temporada para SRAG');
       $('#map-legend-title').text('Classificação da Temporada');
       $('#map-leg-low').text('Baixa');
@@ -209,7 +217,11 @@ class Dashboard {
       $('#btn-resumed').removeClass('selected');
       $('#btn-contingency').addClass('selected');
 
+      $('#map-tab-contingency').addClass('active');
+      $('#map-tab-contingency').addClass('disabled');
+
       $('.period-display').text('no ano epidemiológico');
+      $('#map-tab-activity').text('Classificação da Temporada');
       $('#map-incidence-case-title').text('Mapa do Plano de Contingência');
       $('#map-legend-title').text('Nível de ação');
       $('#map-leg-low').text('Nível Basal');

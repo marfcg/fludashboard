@@ -643,7 +643,8 @@ class FluDB:
             'clean_data_epiweek_weekly_incidence_w_situation%s' % table_suffix[filter_type],
             dataset_id=dataset_id, scale_id=scale_id, year=season,
             territory_id=territory_id, low_memory=False, excluded_fields=[
-                'ADNO', 'PARA1', 'PARA2', 'PARA3', 'SARS2'
+                'ADNO', 'PARA1', 'PARA2', 'PARA3', 'PARA4', 'SARS2',
+                'BOCA', 'METAP', 'RINO'
             ]
         )
 
@@ -715,6 +716,11 @@ class FluDB:
           notification."PARA1" AS "Parainfluenza 1",
           notification."PARA2" AS "Parainfluenza 2",
           notification."PARA3" AS "Parainfluenza 3",
+          notification."PARA4" AS "Parainfluenza 4",
+          notification."RINO" AS "Rinovirus",
+          notification."METAP" AS "Metapneumovirus",
+          notification."BOCA" AS "Bocavirus",
+          notification."others" AS "Outros virus",
           notification.negative AS "Testes negativos",
           notification.not_tested AS "Casos sem teste laboratorial",
           notification.delayed AS "Casos aguardando resultado",
@@ -736,6 +742,11 @@ class FluDB:
             "PARA1",
             "PARA2",
             "PARA3",
+            "PARA4",
+            "RINO",
+            "BOCA",
+            "METAP",
+            "others",
             negative,
             not_tested,
             delayed,

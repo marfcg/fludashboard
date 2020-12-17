@@ -21,10 +21,15 @@ def ethio_ts(df=pd.DataFrame, scale_id=int, year=int):
         'SARS-CoV-2',
         'Influenza B',
         'VSR',
+        'Rinovirus',
         'Adenovirus',
+        'Bocavirus',
+        'Metapneumovirus',
         'Parainfluenza 1',
         'Parainfluenza 2',
         'Parainfluenza 3',
+        'Parainfluenza 4',
+        'Outros virus'
     ]
     trace = []
 
@@ -63,10 +68,16 @@ def ethio_ts(df=pd.DataFrame, scale_id=int, year=int):
                         'SARS-CoV-2',
                         'Influenza B',
                         'VSR',
+                        'Rinovirus',
                         'Adenovirus',
+                        'Bocavirus',
+                        'Metapneumovirus',
                         'Parainfluenza 1',
                         'Parainfluenza 2',
-                        'Parainfluenza 3'))
+                        'Parainfluenza 3',
+                        'Parainfluenza 4',
+                        'Outros vírus'
+                        ))
 
     for i in range(1, (nrows + 1)):
         fig.append_trace(trace[i - 1], i, 1)
@@ -104,7 +115,8 @@ def ethio_ts(df=pd.DataFrame, scale_id=int, year=int):
         xaxis = 'xaxis%s' % i
         yaxis = 'yaxis%s' % i
         fig['layout'][xaxis].update(range=[1, lastepiweek])
-        fig['layout'][yaxis].update(range=[0, ymax[min(1, i-1)]], rangemode='nonnegative')
+        # fig['layout'][yaxis].update(range=[0, ymax[min(1, i-1)]], rangemode='nonnegative')
+        fig['layout'][yaxis].update(rangemode='nonnegative')
 
     fig['layout']['xaxis%s' % nrows].update(title='Semana epidemiológica',
                                             zeroline=True, showline=True)
